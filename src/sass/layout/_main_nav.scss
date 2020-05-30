@@ -1,0 +1,66 @@
+/* main-nav */
+.main-nav{
+	display: flex;
+	align-items: center;
+	flex: 1 1 auto;
+	justify-content: flex-end;
+	margin-left: 44px;
+	@include media("<tablet") {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		right: -100%;
+		background: $white;
+		z-index: 100;
+		transition: right .5s;
+		overflow-y: auto;
+		overflow-x: hidden;
+		flex-direction: column;
+		justify-content: center;
+		align-items: stretch;
+		padding: 50px 15px 50px;
+	}
+	@include media("<phone") {
+	}
+	&__list{
+		display: flex;
+		align-items: center;
+		@include media("<tablet"){
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	&__item{
+		margin-left: 44px;
+		@include media("<tablet"){
+			width: 100%;
+			margin-left: 0;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		&:first-child{
+			margin-left: 0;
+		}
+		a{
+			display: block;
+			position: relative;
+			color: #fff;
+			font-size: 13px;
+			line-height: 16px;
+			text-transform: uppercase;
+			font-weight: 600;
+			transition: .3s;
+			padding: 11px -0px;
+			@include media("<tablet"){
+				color: #000;
+			}
+			&:hover{
+				background: $gradient;
+				-webkit-background-clip: text;
+  				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+}

@@ -1,0 +1,910 @@
+.visual{
+	display: block;
+	height: 100vh;
+	position: relative;
+	&__content{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 540px;
+		.h1{
+			color: $white;
+			line-height: 60px;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+			@include media('<phone'){
+				line-height: 40px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&__center-box{
+		display: block;
+		text-align: center;
+	}
+	&__paragraph{
+		display: block;
+		font-size: 18px;
+		line-height: 30px;
+		margin-bottom: 30px;
+		text-align: center;
+		color: $white;
+		font-weight: normal;
+		@include media('<phone'){
+			font-size: 14px;
+			line-height: 25px;
+		}
+	}
+	&__block-bottom{
+		position: absolute;
+		bottom: 48px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: 100%;
+		padding: 0 70px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		@include media('<phone'){
+			padding: 0 30px;
+			bottom: 20px;
+			justify-content: center;
+		}
+	}
+	&__social-list{
+		display: flex;
+		align-items: center;
+		
+		li{
+			margin-right: 35px;
+			@include media('<phone'){
+				margin-right: 25px;
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+			a{
+				display: block;
+				img{
+					transition: 0.3s;
+					transform: scale(1);
+				}
+				&:hover{
+					img{
+						transform: scale(1.2);
+					}
+				}
+			}
+		}
+	}
+	&__btn-down{
+			padding: 0 20px;
+		@include media('<phone'){
+			display: none;
+		}
+		img{
+			@include media('<phone'){
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&:hover{
+			img{
+				animation: bounce 1.2s infinite;
+				transform-origin: center bottom;
+			}
+		}
+	}
+}
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+.orange{
+	color: $crusta;
+}
+.info{
+	display: block;
+	padding: 100px 0 100px;
+	@include media('<tablet'){
+		padding: 50px 0 70px;
+	}
+	.container{
+		max-width: 1190px;
+	}
+	&__content{
+		display: flex;
+		@include media('<tablet'){
+			flex-direction: column;
+		}
+		.h2{
+			margin-bottom: 30px;
+			text-transform: uppercase;
+			text-align: center;
+			@include media('<phone'){
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&__text{
+		max-width: 500px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		@include media('<tablet'){
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	&__holder-pr{
+		display: block;
+	}
+	&__paragraph{
+		font-size: 16px;
+		line-height: 27px;
+		margin-bottom: 27px;
+		@include media('<phone'){
+			font-size: 13px;
+			line-height: 20px;
+			margin-bottom: 15px;
+		}
+		&:last-child{
+			margin-bottom: 50px;
+			@include media('<phone'){
+				margin-bottom: 25px;
+			}
+		}
+	}
+	&__box-img{
+		display: block;
+		margin-right: 110px;
+		position: relative;
+		border-radius: 5px;
+		max-width: 575px;
+		width: 100%;
+		@include media('<tablet'){
+			margin: -0px auto 20px;
+		}
+		img{
+			display: block;
+			max-width: 100%;
+		}
+	}
+	.btn-default{
+		margin: 0 auto;
+		//@include media('<tablet'){
+		//}
+	}
+
+}
+.market{
+	padding: 14px 0 170px;
+	@include media('<tablet'){
+		padding: 14px 0 80px;
+	}
+	@include media('<phone'){
+		padding: 14px 0 50px;
+	}
+	.h2{
+		text-transform: uppercase;
+		margin-bottom: 16px;
+	}
+	&__paragraph{
+		display: block;
+		font-size: 16px;
+		line-height: 170%;
+		margin-bottom: 70px;
+		color: #8D8D8D;
+		text-align: center;
+		@include media('<phone'){
+			font-size: 13px;
+			line-height: 20px;
+			margin-bottom: 35px;
+		}
+	}
+}
+.tabs{
+	display: none;
+	.nav{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 24px;
+		&-item{
+			min-width: 130px;
+			overflow: hidden;
+			border: 1px solid #E6E6E6;
+			box-sizing: border-box;
+			&:first-child{
+				border-radius: 8px 0px 0px 8px;
+			}
+			&:last-child{
+				border-radius: 0px 8px 8px 0px;
+			}
+		}
+		&-link{
+			display: block;
+			font-size: 13px;
+			line-height: 16px;
+			font-weight: 600;
+			color: #BDBDBD;
+			padding: 12px 5px;
+			background: $white;
+		}
+		.active{
+			background: $gradient;
+			color: $white;
+		}
+	}
+	@include media('<phone'){
+		display: block;
+	}
+	.fade {
+		transition: opacity 0.15s linear;
+	}
+	.tab-content > .tab-pane {
+		display: none;
+	}
+	.tab-content > .active {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+.post{
+	display: block;
+	max-width: 925px;
+	margin: 0 auto;
+	&__holder{
+		display: flex;
+		margin: 0 -32px;
+		@include media('<tablet'){
+			margin: 0 -20px;
+		}
+		@include media('<phone'){
+			display: none;
+		}
+	}
+	&__item{
+		padding: 0 32px;
+		@include media('<tablet'){
+			padding: 0 20px;
+		}
+		@include media('<phone'){
+			padding: 0;
+			margin-bottom: 30px;
+		}
+
+	}
+	&__content{
+		padding: 40px 60px;
+		background: $white;
+		box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.06);
+		border: 1px solid transparent;
+		border-radius: 8px;
+		text-align: center;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transform: scale(1);
+		transition: .3s;
+		&:hover{
+			@include media('>phone'){
+				box-shadow: -48px 47px 50px rgba(0, 0, 0, 0.08);
+				transform: scale(1.05);
+				border: 1px solid transparent;
+			    border-image: $gradient;
+			    border-image-slice: 1;
+			}
+		}
+		@include media('<tablet'){
+			padding: 35px 30px;
+		}
+		@include media('<phone'){
+			&:hover{}
+		}
+		.info__paragraph{
+			text-align: center;
+		}
+		.h3{
+			text-transform: uppercase;
+			margin-bottom: 24px;
+		}
+	}
+	&__free{
+		color: $crusta;
+		font-size: 16px;
+		line-height: 160%;
+		font-weight: 600;
+		margin-bottom: 12px;
+		@include media('<phone'){
+			font-size: 14px;
+		}
+	}
+	&__descr{
+		display: block;
+		font-style: italic;
+		font-size: 16px;
+		line-height: 160%;
+		color: #333;
+		@include media('<phone'){
+			font-size: 14px;
+		}
+	}
+	&__list{
+		width: 100%;
+		border-top: 1px solid #E6E6E6;
+		border-bottom: 1px solid #E6E6E6;
+		padding: 24px 0;
+		margin-bottom: 30px;
+		@include media('<phone'){
+			margin-bottom: 20px;
+		}
+	}
+	&__list-item{
+		display: block;
+		text-align: left;
+		position: relative;
+		padding-left: 34px;
+		margin-bottom: 22px;
+		font-size: 14px;
+		text-transform: uppercase;
+		@include media('<phone'){
+			font-size: 12px;
+			margin-bottom: 15px;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top: 7px;
+			left: 5px;
+			background: url(../images/orange-check.svg) 50% 50% no-repeat;
+			width: 8px;
+			height: 6px;
+			@include media('<phone'){
+				top: 5px;
+			}
+		}
+	}
+}
+.mailing{
+	margin-bottom: 180px;
+	@include media('<tablet'){
+		margin-bottom: 90px;
+	}
+	@include media('<phone'){
+		margin-bottom: 50px;
+	}
+	&__content{
+		background: $gradient;
+		padding: 50px 55px;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include media('<tablet'){
+			flex-direction: column;
+			padding: 25px 27px;
+		}
+		@include media('<phone'){
+			background: $white;
+			box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.06);
+			border-radius: 0px 0px 8px 8px;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 9px;
+				background: url(../images/Frame2.svg)50% 50% no-repeat;
+				background-size: 100% auto;
+			}
+		}
+	}
+	&__text{
+		display: block;
+		max-width: 530px;
+		padding-left: 110px;
+		position: relative;
+		margin-right: 10px;
+		@include media('<tablet'){
+			margin-bottom: 20px;
+			margin-right: 0;
+		}
+		@include media('<phone'){
+			padding-left: 0;
+			padding-top: 70px;
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%) scale(1);
+			width: 57px;
+			height: 56px;
+			transition: .3s;
+			@include media('<phone'){
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+				background: url(../images/mail-ico-mb.svg)50% 50% no-repeat;
+				background-size: 100% auto;
+				width: 52px;
+			}
+		}
+		.h3{
+			text-align: left;
+			color: $white;
+			margin-bottom: 16px;
+			@include media('<phone'){
+				color: $black;
+				text-align: center;
+			}
+		}
+	}
+	&__paragraph{
+		margin: 0;
+		font-size: 16px;
+		line-height: 170%;
+		color: $white;
+		@include media('<phone'){
+			font-size: 13px;
+			color: #8D8D8D;
+			text-align: center;
+		}
+	}
+	&__form-holder{
+		max-width: 440px;
+		width: 100%;
+	}
+}
+.contact-form-ex{
+	&__box{
+		&_error{
+			.form__input{
+				box-shadow: inset 0px 0px 7px 3px rgba(255,0,0,1);
+			}
+		}
+	}
+	.input--filled{
+		.form__btn{
+			min-width: 124px;
+			@include media('<phone'){
+				min-width: 100%;
+			}
+		}
+	}
+}
+.form,
+{
+
+	&__box{
+		position: relative;
+		&:hover{
+			.form__btn{
+				min-width: 124px;
+				@include media('<phone'){
+					min-width: 100%;
+				}
+			}
+		}
+		&:focus{
+			.form__btn{
+				min-width: 124px;
+				@include media('<phone'){
+					min-width: 100px;
+				}
+			}
+		}
+		&_error{
+			.form__input{
+				box-shadow: inset 0px 0px 1px 2px rgba(255,0,0,1);
+			}
+		}
+	}
+	.input--filled{
+		.form__btn{
+			min-width: 124px;
+			@include media('<phone'){
+				min-width: 100%;
+			}
+		}
+	}
+	&__input{
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		height: 60px;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 400;
+		padding: 12px 0;
+		background-color: $white;
+		border: none;
+		outline: none;
+		resize: none;
+		padding: 20px 24px;
+		margin: 0;
+		border-radius: 62px;
+		&:focus{
+			.form__btn{
+				min-width: 124px;
+				@include media('<phone'){
+					min-width: 100px;
+				}
+			}
+		}
+		@include media('<phone'){
+			height: 48px;
+			background: #F7F7F7
+		}
+	}
+	&__input::placeholder {
+		color: #BDBDBD;
+	}
+	&__btn{
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		min-width: 96%;
+		padding: 13px 5px;
+		transition: .5s;
+		@include media('<phone'){
+			min-width: 100px;
+			padding: 15px 5px;
+			position: relative;
+			min-width: 100%;
+			right: 0;
+			font-size: 14px;
+			letter-spacing: 0.04em;
+		}
+	}
+	.error{
+		font-size: 0;
+	}
+}
+.form-contact{
+}
+.contact{
+	flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.range{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__content{
+		.h2{
+
+		}
+	}
+	&__element{
+		display: block;
+		margin-bottom: 10px;
+		.range-selector{
+			&:before{
+				content: '';
+				display: inline-block;
+				vertical-align: top;
+				margin-right:22px ;
+				width: 38px;
+				height: 38px;
+			}
+		}
+		.range-selector__item{
+			flex: 1;
+		    display: block;
+		    position: relative;
+		    min-width: 46px;
+		    width: 70px;
+		    color: #3c475b;
+		    text-align: center;
+		    cursor: pointer;
+		    box-sizing: content-box;
+		    z-index: 1;
+
+		}
+		.range-selector__hidden-checkbox{
+			position: absolute;
+		    width: 1px;
+		    height: 1px;
+		    margin: -1px;
+		    padding: 0;
+		    clip: rect(1px,1px,1px,1px);
+		    border: 0;
+		    overflow: hidden;
+		    clip-path: inset(100%);
+		    -webkit-clip-path: none;
+		}
+		.is-selected{
+			color: rgba(255,255,255,.5);
+			&:before{
+				position: absolute;
+			    top: 9px;
+			    left: 50%;
+			    width: 100%;
+			    height: 25px;
+			    content: "";
+			    z-index: -1;
+			    background-color: rgba(255,125,59,0.90);
+			}
+		}
+		.range-selector__link{
+			display: block;
+			position: relative;
+		    margin: 0 auto 8px;
+		    font-weight: 700;
+		    width: 40px;
+		    height: 40px;
+		    border: 2px solid transparent;
+		    border-radius: 50%;
+		    font-size: 14px;
+		    line-height: 36px;
+		    text-decoration: none;
+		    box-sizing: border-box;
+		    width: 42px;
+		    height: 42px;
+		    line-height: 40px;
+		    &:hover{
+		    	border-color:$crusta;
+		    	color: $crusta;
+		    	background: $white;
+		    }
+		}
+		.is-first-selected{
+			// .range-selector__link{
+				background: $crusta;
+				color: $white;
+			// }
+		}
+		.is-last-selected{
+			background: $crusta;
+			color: $white;
+			&:before{
+				width: 0;
+				height: 0;
+			}
+		}
+		&_bedroom{
+			.range-selector{
+				display: flex;
+				align-items: center;
+
+				&:before{
+					background: url(../images/bed.svg)50% 50% no-repeat;
+					background-size: 100% auto;
+				}
+			}
+			.range-selector__item{
+				&:first-child{
+					.range-selector__link{
+						font-size: 9px;
+					}
+				}
+			}
+		}
+		&_bathroom{
+			.range-selector{
+				display: flex;
+				align-items: center;
+
+				&:before{
+					background: url(../images/betroom.svg)50% 50% no-repeat;
+					background-size: 100% auto;
+				}
+			}
+		}
+		&_parking{
+			.range-selector{
+				display: flex;
+				align-items: center;
+
+				&:before{
+					background: url(../images/parking.svg)50% 50% no-repeat;
+					background-size: 100% auto;
+				}
+			}
+		}
+	}
+	&__descr{
+		display: block;
+		font-size: 14px;
+		line-height: 170%;
+	}
+}
+.works{
+	padding: 0 0 100px;
+	&__holder{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -12px;
+		margin-bottom: 70px;
+		@include media('<tablet'){
+			margin-bottom: 46px;
+		}
+		@include media('<phone'){
+			margin: 0;
+		}
+	}
+	&__item{
+		width: 33.3333%;
+		padding: 0 12px;
+		@include media('<tablet'){
+			width: 50%;
+			margin-bottom: 24px;
+		}
+		@include media('<phone'){
+			width: 100%;
+			padding: 0;
+		}
+
+	}
+	&__content{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 30px 30px 40px;
+		box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.06);
+		border-radius: 8px;
+		background: $white;
+		height: 100%;
+		transition: .3s;
+
+		&:hover{
+			transform: translate(0, -14px);
+			.works__title{
+				color: $crusta;
+			}
+
+		}
+	}
+	&__box-img{
+		display: block;
+		margin-bottom: 23px;
+		img{
+			display: block;
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+	&__title{
+		display: block;
+		font-size: 18px;
+		line-height: 150%;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		transition: .3s;
+	}
+	&__text{
+		font-size: 14px;
+		line-height: 170%;
+		font-weight: normal;
+	}
+}
+
+
+.webinar{
+	margin-bottom: 50px;
+	.h2{
+		text-transform: uppercase;
+		&_mb70{
+			margin-bottom: 70px;
+			@include media('<phone'){
+				margin-bottom: 35px;
+			}
+		}
+	}
+	&__row{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -50px;
+		@include media('<phone'){
+			margin: 0;
+		}
+	}
+	&__col{
+		width: 50%;
+		padding: 0 50px;
+		box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.06);
+		border-radius: 8px;
+		@include media('<phone'){
+			width: 100%;
+			padding: 0;
+			margin-bottom: 20px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+	}
+	&__img-box{
+		background: linear-gradient(101.12deg, #FE5D1E 0%, #FFA53B 100%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 125px;
+		overflow: hidden;
+		border-radius: 8px;
+		@include media('<phone'){
+			height: 80px;
+			padding: 10px 0;
+		}
+		img{
+			display: block;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__content{
+		padding: 50px 24px 45px;
+		@include media('<phone'){
+			padding: 25px 12px 20px;
+		}
+	}
+	&__subtitle{
+		display: block;
+		max-width: 310px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	&__text{
+		display: block;
+		text-align: center;
+		margin-bottom: 12px;
+	}
+	.form__input{
+		border: 1px solid $crusta;
+	}
+	.form__btn{
+		&:hover{
+			transform: translate(0, 0);
+		}
+	}
+}
